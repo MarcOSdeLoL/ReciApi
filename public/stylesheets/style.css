@@ -1,0 +1,59 @@
+body {
+  background-color: #fefce6;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #be80cf
+}
+
+#myMap {
+  height: 400px;
+  width: 600px
+}
+
+.navbar {
+  background-color: rgb(124, 49, 143);
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.navbar img {
+  height: 50px;
+  width: 50px;
+  margin: 10px
+}
+
+.nav-link {
+  color: #fefce6
+}
+
+.navbar-brand {
+  color: #fefce6
+}
+
+.btn-color {
+  background-color: rgb(124, 49, 143)
+}
+
+.dropdown-menu {
+  background-color: rgb(124, 49, 143)
+}
+
+.dropdown-toggle {
+  color: #fefce6
+}
+
+.dropdown-item {
+  color: #fefce6
+}
+
+.card {
+  background-color: #fefce6
+}
+
+.avatarImg img {
+  height: 150px;
+  width: 150px
+}
+
+#recipeTitle {
+  font-weight: bold;
+}

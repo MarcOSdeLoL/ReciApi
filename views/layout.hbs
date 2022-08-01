@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>{{appTitle}}</title>
+
+   {{!-- BOOTSTRAP CSS --}}
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+   {{!-- CUSTOM STYLING --}}
+   <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+
+   <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="/"><img src="./../../images/ReciAlpaca.png" alt="Alpaquita"></a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+               <div class="btn-group">
+                  <button type="button" class="btn btn-color dropdown-toggle" data-bs-toggle="dropdown"
+                     aria-expanded="false">
+                     AUTH
+                  </button>
+                  <ul class="dropdown-menu">
+                     <li class="nav-item">
+                        <a class="dropdown-item" class="nav-link" href="/sign-up">Register</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="dropdown-item" class="nav-link" href="/log-in">Login</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="dropdown-item" class="nav-link" href="/users">User List</a>
+                     </li>
+                     {{#if roles.isAdmin}}
+                     <li class="nav-item">
+                        <a class="dropdown-item" class="nav-link" href="/admin">Admin Panel</a>
+                     </li>
+                     {{/if}}
+                     <li>
+                        <hr class="dropdown-divider">
+                     </li>
+                     <li>
+                        <form action="/log-out" method="POST" class="dropdown-item">
+                           <input class="dropdown-item" type="submit" value="Log-out">
+                        </form>
+                     </li>
+                  </ul>
+               </div>
+               <div class="btn-group">
+                  <button type="button" class="btn btn-color dropdown-toggle" data-bs-toggle="dropdown"
+                     aria-expanded="false">
+                     RECIPES
+                  </button>
+                  <ul class="dropdown-menu">
+                     <li class="nav-item">
+                        <a class="dropdown-item" class="nav-link" href="/recipes/create">New Recipe</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="dropdown-item" class="nav-link" href="/recipes/list">Recipe List</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="dropdown-item" class="nav-link" href="/recipes/my-recipes">My recipes</a>
+                     </li>
+                  </ul>
+               </div>
+         </div>
+      </div>
+   </nav>
+
+
+   {{{body}}}
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"></script>
+   <script src="/js/script.js"></script>
+</body>
+
+</html>
